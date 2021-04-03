@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BetterBusinessLogic.cs" />
     <Compile Include="BusinessLogic.cs" />
     <Compile Include="IBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Utilities\IDataAccess.cs" />
     <Compile Include="Utilities\ILogger.cs" />
     <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="Utilities\NewLogger.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
