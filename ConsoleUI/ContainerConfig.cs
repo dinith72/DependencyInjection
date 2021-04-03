@@ -11,11 +11,11 @@ namespace ConsoleUI
             ContainerBuilder builder = new ContainerBuilder();
 
             // registering the classes 
-            builder.RegisterType<BusinessLogic>().As<IBusinessLogic>();
+            builder.RegisterType<BetterBusinessLogic>().As<IBusinessLogic>();
             builder.RegisterType<Application>().As<IApplication>();
 
             builder.RegisterType<DataAccess>().As<IDataAccess>();
-            builder.RegisterType<Logger>().As<ILogger>();
+            builder.RegisterType<NewLogger>().As<ILogger>();
 
 
 
