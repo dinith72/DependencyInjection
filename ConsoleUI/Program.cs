@@ -1,9 +1,5 @@
-﻿using DemoLibrary;
+﻿using Autofac;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleUI
 {
@@ -11,9 +7,19 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            BusinessLogic businessLogic = new BusinessLogic();
+            //BusinessLogic businessLogic = new BusinessLogic();
 
-            businessLogic.ProcessData();
+            ///  businessLogic.ProcessData();
+            ///  
+
+            IContainer container = ContainerConfig.Configure();
+
+            using (var scope = container.BeginLifetimeScope())
+            {
+
+                IApplication application = scope.Resolve<IApplication>();
+                application.run();
+            }
 
             Console.ReadLine();
         }
