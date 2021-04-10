@@ -11,6 +11,7 @@ namespace DemoLibrary
         public BusinessLogic(ILogger logger, IDataAccess dataAccess)
         {
             _logger = logger;
+           (NewLogger) _logger.
             _dataAccess = dataAccess;
         }
 

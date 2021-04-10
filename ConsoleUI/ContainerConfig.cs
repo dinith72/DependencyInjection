@@ -15,7 +15,7 @@ namespace ConsoleUI
             builder.RegisterType<Application>().As<IApplication>();
 
             builder.RegisterType<DataAccess>().As<IDataAccess>();
-            builder.RegisterType<NewLogger>().As<ILogger>();
+            builder.RegisterType<NewLogger>().As<ILogger>().WithParameter(new TypedParameter(typeof(string), "loggerdId"));
 
 
 
